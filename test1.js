@@ -1,0 +1,5 @@
+var my_awesome_script = document.createElement('script');
+
+my_awesome_script.setAttribute('src','http://example.com/site.js');
+
+document.head.appendChild(my_awesome_script);
