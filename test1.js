@@ -5,10 +5,10 @@ function loadExternalJS(TARGET_URL){
     var code = xhr.responseText;
     var dScript = document.createElement('script');
     try {
-    dScript.appendChild( document.createTextNode(parsed) );
+    dScript.appendChild( document.createTextNode(code) );
     document.body.appendChild(dScript);
     } catch(e) {
-    dScript.text = parsed;
+    dScript.text = code;
     document.getElementsByTagName('head')[0].appendChild(dScript);
     }
     xhr = null;
