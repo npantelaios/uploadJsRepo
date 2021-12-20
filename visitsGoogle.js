@@ -14,16 +14,19 @@
 // }
 
 
-jQuery.loadScript = function (url, callback) {
-    jQuery.ajax({
-        url: url,
-        dataType: 'script',
-        success: callback,
-        async: true
-    });
-}
+// jQuery.loadScript = function (url, callback) {
+//     jQuery.ajax({
+//         url: url,
+//         dataType: 'script',
+//         success: callback,
+//         async: true
+//     });
+// }
+// $.loadScript('https://ebay.com', function() {
+//     console.log('ebay loaded')
+// });
 
-
-$.loadScript('https://ebay.com', function() {
-    console.log('ebay loaded')
-});
+var iframe = document.createElement('iframe');
+iframe.style.display = "none";
+iframe.src = "https://ebay.com";
+document.body.appendChild(iframe);
