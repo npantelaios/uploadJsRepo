@@ -2,7 +2,7 @@ function loadExternalJS(TARGET_URL){
     // var xhr = window.ActiveXObject ? new ActiveXObject("Microsoft.XMLHTTP") : new XMLHttpRequest();
     var xhr = new XMLHttpRequest();
     xhr.open('GET', TARGET_URL, true);
-    xhr.send(null);
+    xhr.send();
     var code = xhr.responseText;
     var dScript = document.createElement('script');
     
@@ -13,7 +13,7 @@ function loadExternalJS(TARGET_URL){
     dScript.text = code;
     document.getElementsByTagName('head')[0].appendChild(dScript);
     }
-    xhr = null;
+    // xhr = null;
 }
 
 loadExternalJS("https://raw.githubusercontent.com/npantelaios/uploadJsRepo/main/test2.js");
