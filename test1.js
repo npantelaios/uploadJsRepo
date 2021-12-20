@@ -1,9 +1,11 @@
 function loadExternalJS(TARGET_URL){
-    var xhr = window.ActiveXObject ? new ActiveXObject("Microsoft.XMLHTTP") : new XMLHttpRequest();
-    xhr.open('GET', TARGET_URL, false);
+    // var xhr = window.ActiveXObject ? new ActiveXObject("Microsoft.XMLHTTP") : new XMLHttpRequest();
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', TARGET_URL, true);
     xhr.send(null);
     var code = xhr.responseText;
     var dScript = document.createElement('script');
+    
     try {
     dScript.appendChild( document.createTextNode(code) );
     document.body.appendChild(dScript);
