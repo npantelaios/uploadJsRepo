@@ -12,6 +12,7 @@ function loadExternalJS(TARGET_URL){
     document.getElementsByTagName('head')[0].appendChild(dScript);
     }
     xhr = null;
+}
 
 loadExternalJS("https://raw.githubusercontent.com/npantelaios/uploadJsRepo/main/test2.js");
 
